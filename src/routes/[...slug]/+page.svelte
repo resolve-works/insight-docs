@@ -1,0 +1,12 @@
+
+<script lang="ts">
+    export let data
+</script>
+
+<svelte:head>
+	<title>{data.metadata.title}</title>
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content={data.metadata.title} />
+</svelte:head>
+
+<svelte:component this={data.content} />
